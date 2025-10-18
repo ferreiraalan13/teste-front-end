@@ -1,4 +1,5 @@
 import { Banner } from "./components/Banner/Banner";
+import { CategoryList } from "./components/CategoryList/CategoryList";
 import { Header } from "./components/Header/Header";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Header />
       <Banner />
+      <CategoryList />
     </>
   );
 }

@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.cardDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  text-align: center; // garante que o texto fique centralizado
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1; // mantém o card quadrado
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #555;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .iconWrapper {
+    font-size: 2rem;
+    color: #555;
+    transition: color 0.3s;
+  }
+
+  &.active {
+    .iconWrapper {
+      color: #3019b2;
+    }
+  }
+}
+
+.name {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  word-wrap: break-word; /* quebra palavras longas */
+  white-space: normal; /* permite quebra de linha */
+  line-height: 1.1;
+  max-width: 100%;
+  color: #555;
+  transition: color 0.3s;
+
+  &.active {
+    color: #3019b2;
+  }
+}

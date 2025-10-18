@@ -1,0 +1,132 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* === Linha superior === */
+.topBar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #ddd;
+
+  .infoItem {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #444;
+
+    svg {
+      color: #3019b2;
+    }
+  }
+}
+
+/* === Linha intermediária === */
+.mainBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  .logo {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .searchContainer {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 2rem;
+
+    input {
+      flex: 1;
+      padding: 0.6rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      font-size: 1rem;
+
+      &:focus {
+        border-color: #3019b2;
+      }
+    }
+
+    button {
+      padding: 0.6rem 1rem;
+      background-color: #f6f6f6;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: #eaeaea;
+      }
+    }
+  }
+
+  .iconGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    .icon {
+      font-size: 1.3rem;
+      color: #444;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #3019b2;
+      }
+    }
+  }
+}
+
+/* === Linha inferior - Categorias === */
+.categoriesBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  border-top: 1px solid #eee;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+
+  span {
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #333;
+
+    &:hover {
+      color: #3019b2;
+    }
+
+    &.subscription {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      svg {
+        color: #3019b2;
+      }
+    }
+  }
+}

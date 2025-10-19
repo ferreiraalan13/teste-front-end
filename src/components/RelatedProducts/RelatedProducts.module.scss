@@ -32,10 +32,14 @@
     background-color: #DEDEDE;
   }
 }
-
+.cardMainCategories{
+  display: flex;
+  width: 1280px;
+  justify-items: center;
+  justify-content: center;
+}
 .categories {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -51,7 +55,12 @@
   font-weight: 500;
   color: #333;
   text-align: center;
-  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 40px;
+  font-size: 16px;
 
   &:hover {
     border-color: #bbb;

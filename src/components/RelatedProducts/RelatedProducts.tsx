@@ -46,18 +46,20 @@ export function RelatedProducts({ showCategories = true }: Props) {
         <div className={styles.line}></div>
       </div>
       {showCategories ? (
-        <div className={styles.categories}>
-          {categories.map((cat, index) => (
-            <div
-              key={index}
-              className={`${styles.category} ${
-                active === cat ? styles.active : ""
-              }`}
-              onClick={() => setActive(cat)}
-            >
-              {cat}
-            </div>
-          ))}
+        <div className={styles.cardMainCategories}>
+          <div className={styles.categories}>
+            {categories.map((cat, index) => (
+              <div
+                key={index}
+                className={`${styles.category} ${
+                  active === cat ? styles.active : ""
+                }`}
+                onClick={() => setActive(cat)}
+              >
+                {cat}
+              </div>
+            ))}
+          </div>
         </div>
       ) : (
         <p>Ver todos</p>

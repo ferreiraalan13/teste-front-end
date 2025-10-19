@@ -35,14 +35,19 @@
   }
 }
 
+.mainContainer{
+  width: 100% ;
+  display: flex;
+  justify-content: center;
+}
+
 /* === Linha intermediária === */
 .mainBar {
+  width: 1280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff;
-  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 
   .logo {
     height: 50px;
@@ -52,16 +57,19 @@
   .searchContainer {
     display: flex;
     flex: 1;
-    max-width: 500px;
     margin: 0 2rem;
+    max-width: 630px;
+   
 
     input {
       flex: 1;
       padding: 0.6rem 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px 0 0 4px;
+      background-color: #F6F5F2;
+      border: 1px none #ccc;
+      border-radius: 15px 0 0 15px;
       outline: none;
       font-size: 1rem;
+      font-family: 'Poppins';
 
       &:focus {
         border-color: #3019b2;
@@ -71,16 +79,16 @@
     button {
       padding: 0.6rem 1rem;
       background-color: #f6f6f6;
-      border: 1px solid #ccc;
+      border: 1px none #ccc;
       border-left: none;
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 15px 15px 0;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
 
       &:hover {
-        background-color: #eaeaea;
+        background-color: #F6F5F2;
       }
     }
   }
@@ -105,24 +113,32 @@
 
 /* === Linha inferior - Categorias === */
 .categoriesBar {
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7.5rem;
+  gap: 91px;
   background-color: #fff;
   padding: 0.8rem 1rem;
   border-top: 1px solid #eee;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 0.9rem;
+  width: 1280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
   span {
+    font-size: 12px;
     cursor: pointer;
     transition: color 0.3s;
     color: #9F9F9F;
 
     &:hover {
       color: #3019b2;
+
+      svg {
+        color: #3019b2;
+      }
     }
 
     &.subscription {
@@ -130,9 +146,8 @@
       align-items: center;
       gap: 0.4rem;
 
-      svg {
-        color: #3019b2;
-      }
+      
+      
     }
   }
 }

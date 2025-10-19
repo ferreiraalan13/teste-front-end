@@ -2,15 +2,15 @@ import {
   FaLock,
   FaTruck,
   FaCreditCard,
-  FaShoppingCart,
-  FaUser,
-  FaHeart,
-  FaArrowLeft,
-  FaStar,
+  FaRegUserCircle,
+  FaRegHeart,
 } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import styles from "./Header.module.scss";
 import logo from "../../assets/logo.png";
+import { HiMiniArrowUturnLeft } from "react-icons/hi2";
+import { FiShoppingCart } from "react-icons/fi";
+import { TbCrown } from "react-icons/tb";
 
 export function Header() {
   return (
@@ -40,36 +40,40 @@ export function Header() {
       </div>
 
       {/* Linha intermediária */}
-      <div className={styles.mainBar}>
-        <img className={styles.logo} src={logo} alt="Logo" />
+      <div className={styles.mainContainer}>
+        <div className={styles.mainBar}>
+          <img className={styles.logo} src={logo} alt="Logo" />
 
-        <div className={styles.searchContainer}>
-          <input type="text" placeholder="O que você está buscando?" />
-          <button>
-            <IoSearch size={24} fill="#929291" />
-          </button>
-        </div>
+          <div className={styles.searchContainer}>
+            <input type="text" placeholder="O que você está buscando?" />
+            <button>
+              <IoSearch size={24} fill="#929291" />
+            </button>
+          </div>
 
-        <div className={styles.iconGroup}>
-          <FaArrowLeft className={styles.icon} />
-          <FaHeart className={styles.icon} />
-          <FaShoppingCart className={styles.icon} />
-          <FaUser className={styles.icon} />
+          <div className={styles.iconGroup}>
+            <HiMiniArrowUturnLeft className={styles.icon} />
+            <FaRegHeart className={styles.icon} />
+            <FaRegUserCircle className={styles.icon} />
+            <FiShoppingCart className={styles.icon} />
+          </div>
         </div>
       </div>
 
       {/* Linha inferior - categorias */}
-      <div className={styles.categoriesBar}>
-        <span>Todas Categorias</span>
-        <span>Supermercado</span>
-        <span>Livros</span>
-        <span>Moda</span>
-        <span>Lançamentos</span>
-        <span>Ofertas do Dia</span>
-        <span className={styles.subscription}>
-          <FaStar />
-          Assinatura
-        </span>
+      <div className={styles.mainContainer}>
+        <div className={styles.categoriesBar}>
+          <span>Todas Categorias</span>
+          <span>Supermercado</span>
+          <span>Livros</span>
+          <span>Moda</span>
+          <span>Lançamentos</span>
+          <span>Ofertas do Dia</span>
+          <span className={styles.subscription}>
+            <TbCrown size={25} />
+            Assinatura
+          </span>
+        </div>
       </div>
     </header>
   );

@@ -61,6 +61,7 @@ export function ProductCarousel({ products }: Props) {
           onClose={() => setSelectedProduct(null)}
         />
       )}
+
       <section className={styles.carouselContainer}>
         <button
           className={`${styles.navButton} ${styles.left} ${

@@ -1,6 +1,73 @@
-.banner {
-  max-height: 390px;
+.bannerContainer {
+  position: relative;
   width: 100%;
+  height: 390px;
+  overflow: hidden;
+
+  /* overlay escuro */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* ajustável: 0.4 = leve escurecimento */
+    z-index: 1;
+  }
 }
 
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
+.bannerContent {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  z-index: 2; /* acima do overlay */
+}
+
+.offText{
+  color: #f7ca11;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 50px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 32px;
+  margin-top: 16px;
+  font-weight: 400;
+}
+
+.button {
+  margin-top: 24px;
+  background-color: #f7ca11;
+  color: #271c47;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 49px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 206px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

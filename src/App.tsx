@@ -13,6 +13,9 @@ function App() {
       <CategoryList />
       <RelatedProducts />
       <Parceiros />
+
+      <RelatedProducts showCategories={false} />
+      <Parceiros />
       <NaveguePorMarcas />
       <RelatedProducts showCategories={false} />
     </>

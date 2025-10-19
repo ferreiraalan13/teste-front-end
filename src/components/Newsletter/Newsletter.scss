@@ -1,0 +1,91 @@
+.newsletter {
+  width: 100%;
+  background-color: #271c47;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.newsletter-left {
+  max-width: 45%;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600; // semibold
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+}
+
+.newsletter-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  .inputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    input {
+      height: 48px;
+      padding: 0 16px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      width: 240px;
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    button {
+      background-color: #f7ca11;
+      color: #271c47;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      height: 48px;
+      padding: 0 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ffd84d;
+      }
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    input {
+      width: 16px;
+      height: 16px;
+      accent-color: #f7ca11;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: #e0e0e0;
+    }
+  }
+}

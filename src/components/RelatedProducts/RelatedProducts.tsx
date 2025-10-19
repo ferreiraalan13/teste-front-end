@@ -57,7 +57,7 @@ export function RelatedProducts({ showCategories = true }: Props) {
           ))}
         </div>
       ) : (
-        <h2>Ver todos</h2>
+        <p>Ver todos</p>
       )}
 
       <ProductCarousel products={products} />

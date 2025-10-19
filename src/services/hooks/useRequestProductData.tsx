@@ -13,8 +13,12 @@ interface IProductProps {
 }
 
 const RequestProductData = async () => {
+  // const response = await fetch(
+  //   "/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
+  // );
+
   const response = await fetch(
-    "/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
+    "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
   );
 
   const data = await response.json();

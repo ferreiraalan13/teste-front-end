@@ -1,0 +1,143 @@
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wrapper para esconder overflow */
+.carouselWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Área rolável */
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 2rem; // pequeno espaçamento interno
+  scrollbar-width: none; // Firefox
+  
+}
+
+/* Esconde scrollbar no Chrome/Safari/Edge */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 304px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.info {
+  margin-top: 0.5rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+   text-align: left;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.25rem 0;
+   text-align: left;
+}
+
+.freeShipping {
+  color: #1b9e1b;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+   text-align: left;
+}
+
+.buyButton {
+  margin-top: 0.75rem;
+  width: 100%;
+  background: #3442b5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #2a369a;
+  }
+}
+
+/* Botões de navegação */
+.navButton {
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+
+  svg {
+    font-size: 18px;
+    color: #333;
+  }
+
+  &:hover:not(.disabled) {
+    background: #f0f0f0;
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+}
+
+/* Posicionamento lateral */
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}

@@ -1,7 +1,12 @@
 import { useState } from "react";
 import styles from "./RelatedProducts.module.scss";
+import { ProductCarousel } from "../ProductCarousel/ProductCarousel";
 
-export function RelatedProducts() {
+interface Props {
+  showCategories?: boolean;
+}
+
+export function RelatedProducts({ showCategories = true }: Props) {
   const [active, setActive] = useState("CELULAR");
 
   const categories = [
@@ -13,6 +18,23 @@ export function RelatedProducts() {
     "VER TODOS",
   ];
 
+  const products = [
+    {
+      productName: "Iphone 11 PRO MAX BRANCO 1",
+      descriptionShort: "Iphone 11 PRO MAX BRANCO 1",
+      photo:
+        "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      price: 15000,
+    },
+    {
+      productName: "IPHONE 13 MINI 1",
+      descriptionShort: "IPHONE 13 MINI 1",
+      photo:
+        "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      price: 9000,
+    },
+  ];
+
   return (
     <section className={styles.container}>
       <div className={styles.titleWrapper}>
@@ -20,20 +42,25 @@ export function RelatedProducts() {
         <h2 className={styles.textTitle}>Produtos relacionados</h2>
         <div className={styles.line}></div>
       </div>
+      {showCategories ? (
+        <div className={styles.categories}>
+          {categories.map((cat, index) => (
+            <div
+              key={index}
+              className={`${styles.category} ${
+                active === cat ? styles.active : ""
+              }`}
+              onClick={() => setActive(cat)}
+            >
+              {cat}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <h2>Ver todos</h2>
+      )}
 
-      <div className={styles.categories}>
-        {categories.map((cat) => (
-          <div
-            key={cat}
-            className={`${styles.category} ${
-              active === cat ? styles.active : ""
-            }`}
-            onClick={() => setActive(cat)}
-          >
-            {cat}
-          </div>
-        ))}
-      </div>
+      <ProductCarousel products={products} />
     </section>
   );
 }

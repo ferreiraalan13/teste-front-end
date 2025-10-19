@@ -31,8 +31,8 @@ export function CategoryList() {
 
   return (
     <section className={styles.container}>
-      {categories.map((category) => (
-        <div className={styles.cardDiv}>
+      {categories.map((category, index) => (
+        <div key={index} className={styles.cardDiv}>
           <div
             key={category.id}
             className={`${styles.card} ${

@@ -64,6 +64,13 @@ export function RelatedProducts({ showCategories = true }: Props) {
       ) : (
         <p>Ver todos</p>
       )}
+
+      {productsData.isLoading && (
+        <>
+          <h2>Carregando produtos...</h2>
+        </>
+      )}
+
       {productsData.data?.products && (
         <ProductCarousel products={productsData.data.products} />
       )}

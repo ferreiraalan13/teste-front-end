@@ -19,15 +19,23 @@ export function Header() {
       <div className={styles.topBar}>
         <div className={styles.infoItem}>
           <FaLock />
-          <span>Compra 100% segura</span>
+          <span>
+            Compra <span className={styles.colorText}>100% segura</span>
+          </span>
         </div>
         <div className={styles.infoItem}>
           <FaTruck />
-          <span>Frete grátis acima de R$ 200</span>
+          <span>
+            <span className={styles.colorText}>Frete grátis</span> acima de R$
+            200
+          </span>
         </div>
         <div className={styles.infoItem}>
           <FaCreditCard />
-          <span>Parcele suas compras</span>
+          <span>
+            {" "}
+            <span className={styles.colorText}>Parcele</span> suas compras
+          </span>
         </div>
       </div>
 

@@ -1,10 +1,16 @@
 .container {
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Poppins', sans-serif;
   padding-left: 100px;
   padding-right: 100px;
+
+  p {
+    font-weight: bold;
+    font-size: 15px;
+  }
 }
 
 .titleWrapper {
@@ -15,14 +21,15 @@
   gap: 1rem;
 
   h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: bold;
     white-space: nowrap;
   }
 
   .line {
     flex: 1;
     height: 1px;
+    background-color: #DEDEDE;
   }
 }
 

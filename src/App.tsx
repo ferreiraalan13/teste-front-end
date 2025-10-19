@@ -1,5 +1,6 @@
 import { Banner } from "./components/Banner/Banner";
 import { CategoryList } from "./components/CategoryList/CategoryList";
+import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { NaveguePorMarcas } from "./components/NaveguePorMarcas/NaveguePorMarcas";
 import { Newsletter } from "./components/Newsletter/Newsletter";
@@ -20,6 +21,7 @@ function App() {
       <NaveguePorMarcas />
       <RelatedProducts showCategories={false} />
       <Newsletter />
+      <Footer />
     </>
   );
 }

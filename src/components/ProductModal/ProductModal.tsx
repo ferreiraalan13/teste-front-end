@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, type MouseEvent } from "react";
 import { FaTimes } from "react-icons/fa";
 import styles from "./ProductModal.module.scss";
 
@@ -19,10 +19,24 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
     price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
   const handleIncrease = () => setQuantity((prev) => prev + 1);
-  const handleDecrease = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 0));
+  const handleDecrease = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+
+  // Fechar com tecla ESC
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  // Fechar ao clicar fora do modal
+  const handleOverlayClick = (e: MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) onClose();
+  };
 
   return (
-    <div className={styles.overlay}>
+    <div className={styles.overlay} onClick={handleOverlayClick}>
       <div className={styles.modal}>
         <button className={styles.closeButton} onClick={onClose}>
           <FaTimes />
@@ -39,6 +53,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
         <div className={styles.right}>
           <h2 className={styles.name}>{product.productName}</h2>
           <p className={styles.price}>{formatPrice(product.price)}</p>
+
           <div className={styles.secondGroup}>
             <p className={styles.description}>{product.descriptionShort}</p>
             <p className={styles.moreDetails}>

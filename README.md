@@ -1,35 +1,55 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# Teste Front-End – Econverse
 
-### Vem ser #Econverse!
+Este projeto foi desenvolvido como parte de um **processo seletivo para estágio em Front-End**.  
+O objetivo era implementar uma página conforme o layout e as especificações técnicas fornecidas.
 
-Segue abaixo as instruções para a execução do teste.
+## Tecnologias Utilizadas
 
-## Instruções
+- React, Typescript, Vite, Sass, React icons, React query
 
-- Faça um fork desse projeto para a sua conta pessoal do GitHub.
-- Desenvolva a página conforme as **Especificações Técnicas**
-- Crie um README com as instruções para compilar, testar e rodar o projeto.
-- O link do repositório deverá ser enviado para o e-mail ana.nascimento@econverse.com.br com o título **Teste Vaga FrontEnd**
 
-## Especificações Técnicas
+## Pré-requisitos
+Antes de começar, você precisa ter instalado em sua máquina:
 
-- Desenvolver a pagina em React e TypeScript conforme o [layout](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). Para conseguir pegar os elementos do Figma, basta copiar o layout para sua conta que terá acesso de edição.
-- Montar a [vitrine](https://app.econverse.com.br/teste-front-end/junior/tecnologia/layout/vitrine-produtos.png) de produtos consumindo as informações dos produtos em json atraves desse [Link](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
-- Desenvolver a interação ao clicar em um produto conforme layout. A interação consiste em abrir um modal com as principais informações do produto presente no arquivo [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json) conforme o produto que clicar.
-- Utilizar Pré-processador Sass, Less ou Stylus.
-- Respeitar o Layout pixel a pixel, tamanho das fontes, cores e botões.
-- Não Utilizar bibliotecas UI como Bootstrap, Foundation, ou afins.
+- [Node.js](https://nodejs.org/) 
+- [Yarn](https://classic.yarnpkg.com/) ou [npm](https://www.npmjs.com/)
 
-## Pontos Extras
 
-- Utilizar Boas práticas de SEO
-- Uso de HTML semântico
+## Como rodar o projeto localmente
 
-## O que avaliaremos em seu teste
+```bash
+# Clone o repositório
+git clone https://github.com/ferreiraalan13/teste-front-end.git
 
-- Organização do projeto
-- Lógica do código
-- Componentização
-- Alcance dos objetivos propostos
+# Acesse a pasta do projeto
+cd teste-front-end
 
-**Boa sorte! ;)**
+# Instale as dependências
+yarn install
+
+# Inicie o servidor de desenvolvimento
+yarn dev
+```
+
+O projeto estará disponível em:
+👉 http://localhost:5173/
+
+
+##  Conhecimentos aplicados
+- Criação de componentes reutilizáveis com React + TypeScript
+- Consumo de API
+- Estilização modular com Sass
+
+
+## Contato
+
+Caso queira entrar em contato, você pode me encontrar através de:
+
+- **Nome:** ALAN FERREIRA MORAES
+- **Email:** ferreiraalan13@gmail.com
+- **Celular:** 1196776-4367
+- **LinkedIn:** [linkedin.com/in/ferreiraalan13](https://www.linkedin.com/in/ferreiraalan13)  
+- **GitHub:** [github.com/ferreiraalan13](https://github.com/ferreiraalan13)  
+
+Fico à disposição para dúvidas ou feedback sobre o projeto!
+
